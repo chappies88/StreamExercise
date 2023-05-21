@@ -1,5 +1,9 @@
 package org.chan;
 
+import java.util.Collection;
+import java.util.List;
+import java.util.Set;
+
 public class StreamStuff {
 
     public static void main(String[] args) {
@@ -13,6 +17,17 @@ public class StreamStuff {
         employee
                 .lines()
                 .forEach(s -> System.out.println(s));
+
+
+        List<String> nums = List.of("One", "Two", "Three", "Four");
+
+        nums.stream()
+                .map(String::length)
+                .forEach(System.out::println);
+
+
+        Collection<String> fruit = Set.of("Apple", "Banana", "Duran", "Egg Plant");
+
 
 
     }
